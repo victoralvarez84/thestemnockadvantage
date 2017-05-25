@@ -9319,6 +9319,11 @@ nav img {
   height: 100vh;
   margin-bottom: -20px;
 }
+@media (max-width: 500px) {
+  #hello {
+    background-size: contain;
+  }
+}
 .helloContent {
   display: flex;
   flex-direction: column;
