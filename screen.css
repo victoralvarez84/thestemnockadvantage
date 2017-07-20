@@ -9087,6 +9087,7 @@ button.close {
   position: fixed;
   padding-left: 4%;
   padding-right: 5%;
+  z-index: 1000;
 }
 @media (max-width: 768px) {
   .laptopNav {
@@ -9157,6 +9158,7 @@ nav img {
   position: fixed;
   padding-left: 5%;
   padding-right: 5%;
+  z-index: 1000;
 }
 @media (max-width: 768px) {
   .laptopMobile {
@@ -9226,6 +9228,7 @@ nav img {
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
+  text-decoration: none;
 }
 .overlay.open {
   opacity: .9;
@@ -9253,6 +9256,7 @@ nav img {
   font-size: 50px;
   font-weight: 400;
   text-align: center;
+  text-decoration: none;
 }
 .overlay ul {
   list-style: none;
@@ -9261,6 +9265,7 @@ nav img {
   display: inline-block;
   position: relative;
   height: 100%;
+  text-decoration: none;
 }
 .overlay ul li {
   display: block;
@@ -9269,6 +9274,7 @@ nav img {
   min-height: 50px;
   position: relative;
   opacity: 0;
+  text-decoration: none;
 }
 .overlay ul li a {
   display: block;
@@ -9281,6 +9287,7 @@ nav img {
 .overlay ul li a:focus:after,
 .overlay ul li a:active:after {
   width: 100%;
+  border: 2px solid transparent;
 }
 .overlay ul li a:after {
   content: '';
@@ -9290,17 +9297,19 @@ nav img {
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
-  background: #000;
+  background: transparent;
   transition: .35s;
 }
 @keyframes fadeInRight {
   0% {
     opacity: 0;
     left: 20%;
+    text-decoration: none;
   }
   100% {
     opacity: 1;
     left: 0;
+    text-decoration: none;
   }
 }
 .mobileLinks li a {
@@ -9308,9 +9317,12 @@ nav img {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: 25px;
+  z-index: 999;
+  text-decoration: none;
 }
 .mobileLinks li a:hover {
   text-decoration: none;
+  opacity: 0.7;
 }
 #hello {
   background: url("assets/michael_landing.jpg") no-repeat center center fixed;
@@ -9318,11 +9330,6 @@ nav img {
   width: 100vw;
   height: 100vh;
   margin-bottom: -20px;
-}
-@media (max-width: 500px) {
-  #hello {
-    background-size: contain;
-  }
 }
 .helloContent {
   display: flex;
@@ -10612,6 +10619,7 @@ button {
   height: 90vh;
   width: 90.5vw;
   margin-top: 100px;
+  z-index: 1;
 }
 @media (max-width: 600px) {
   .video {
@@ -10619,6 +10627,9 @@ button {
     margin-left: 08px;
     width: 100vw;
   }
+}
+.videoContainer {
+  z-index: 0;
 }
 .speakingPage h1 {
   margin-top: 30px;
